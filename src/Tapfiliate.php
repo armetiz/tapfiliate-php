@@ -123,10 +123,18 @@ class Tapfiliate
     protected function guardResponse(Response $response)
     {
         if (200 !== $response->getStatusCode()) {
+            $content = json_decode($response->getContent(), true);
+            $message = "No details";
+            if (isset($content["errors"])) {
+                $message = join(", ", array_map(function(array $error) {
+                    return $error["message"];
+                }, $content["errors"]));
+            }
+
             throw new \RuntimeException(sprintf(
                     'An HTTP %s error occurred when reaching tapfiliate API : %s',
                     $response->getStatusCode(),
-                    $response->getContent()
+                    $message
                 )
             );
         }
