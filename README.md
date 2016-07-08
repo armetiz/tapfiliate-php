@@ -9,8 +9,10 @@
 ```php
 $key   = "APP_KEY"; // Generated from : https://tapfiliate.com/user/api-access/
 
-$tapfiliate    = new Tapfiliate($key, $base);
-$indexMember = new MemberIndex($tapfiliate, $table);
+$tapfiliate  = new Tapfiliate($key);
+$tapfiliate->createConversion([
+    "external_id" => "john.doe@acme.com",
+]);
 ```
 
 ```php
