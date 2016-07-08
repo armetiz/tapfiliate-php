@@ -1,0 +1,24 @@
+{
+    "name": "armetiz/tapfiliate-php",
+    "description": "Manipulate Tapfiliate API using PHP",
+    "keywords": ["php", "tapfiliate", "affiliate", "referral", "sdk"],
+    "homepage": "https://github.com/armetiz/tapfiliate-php",
+    "require": {
+        "php": ">=5.5.0",
+        "kriswallsmith/buzz": "^0.15.0",
+        "beberlei/assert": "~2.1.0"
+    },
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Armetiz\\TapfiliateSDK\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Thomas Tourlourat",
+            "email": "thomas@tourlourat.com",
+            "homepage": "http://www.wozbe.com"
+        }
+    ]
+}
