@@ -15,9 +15,6 @@ $tapfiliate->createConversion([
 ]);
 ```
 
-```php
-```
-
 ## Testing
 
 Not implemented yet.
